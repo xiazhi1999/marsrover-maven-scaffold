@@ -2,7 +2,7 @@ public class RoverController {
     private final Rover rover;
 
     public RoverController(Rover rover) {
-        this.rover=rover;
+        this.rover = rover;
     }
 
 

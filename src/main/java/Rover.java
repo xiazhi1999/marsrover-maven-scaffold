@@ -29,11 +29,11 @@ public class Rover {
     public void move() {
         if (direction.equals("E")) {
             x += 1;
-        }else if (direction.equals("W")) {
+        } else if (direction.equals("W")) {
             x -= 1;
-        }else if (direction.equals("N")) {
+        } else if (direction.equals("N")) {
             y += 1;
-        }else{
+        } else {
             y -= 1;
         }
     }
@@ -41,24 +41,24 @@ public class Rover {
     public void turnLeft() {
         if (direction.equals((EAST))) {
             direction = NORTH;
-        }else if (direction.equals(NORTH)) {
+        } else if (direction.equals(NORTH)) {
             direction = WEST;
-        }else if (direction.equals(WEST)) {
+        } else if (direction.equals(WEST)) {
             direction = SOUTH;
-        }else if (direction.equals(SOUTH)) {
-            direction=EAST;
+        } else if (direction.equals(SOUTH)) {
+            direction = EAST;
         }
     }
 
     public void turnRight() {
         if (direction.equals((EAST))) {
             direction = SOUTH;
-        }else if (direction.equals(NORTH)) {
+        } else if (direction.equals(NORTH)) {
             direction = EAST;
-        }else if (direction.equals(WEST)) {
+        } else if (direction.equals(WEST)) {
             direction = NORTH;
-        }else if (direction.equals(SOUTH)) {
-            direction=EAST;
+        } else if (direction.equals(SOUTH)) {
+            direction = EAST;
         }
     }
 }
