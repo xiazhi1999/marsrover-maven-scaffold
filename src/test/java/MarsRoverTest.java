@@ -17,7 +17,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_move_forward(){
+    public void should_move_forward() {
         Area area = new Area(10, 10);
         Rover rover = new Rover();
         rover.land(area, 5, 5, Rover.EAST);
@@ -27,7 +27,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void turn_left(){
+    public void turn_left() {
         Area area = new Area(10,10);
 
         Rover rover =new Rover();
@@ -48,16 +48,16 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void turn_right(){
+    public void turn_right() {
         Area area = new Area(10,10);
 
         Rover rover =new Rover();
         rover.land(area,5,5,"S");
         rover.turnRight();
-        assertThat(rover.getPosition()).isEqualTo("55W");
+        assertThat(rover.getPosition()).isEqualTo("55E");
 
         rover.turnRight();
-        assertThat(rover.getPosition()).isEqualTo("55N");
+        assertThat(rover.getPosition()).isEqualTo("55S");
 
         rover.turnRight();
         assertThat(rover.getPosition()).isEqualTo("55E");
@@ -69,7 +69,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void roverBatchExcute(){
+    public void roverBatchExcute() {
         Rover rover =new Rover();
         RoverController roverController = new RoverController(rover);
         String mission ="10,10,5,5,E,M,L,M,R";
@@ -84,10 +84,11 @@ public class MarsRoverTest {
         Area area = new Area(10,10);
         Rover rover =new Rover();
         rover.land(area,20,5, "E");
+        rover.move();
     }
 
     @Test
-    public void moveException(){
+    public void moveException() {
         exceptedException.expect(IllegalArgumentException.class);
         exceptedException.expectMessage("out of bound !");
         Area area = new Area(10,10);
