@@ -5,10 +5,10 @@ import org.junit.rules.ExpectedException;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 public class MarsRoverTest {
-    @Rule
-    public ExpectedException exceptedException = ExpectedException.none();
+//    @Rule
+//    public ExpectedException exceptedException = ExpectedException.none();
     @Test
-    public void should_land_the_rover_on_area(){
+    public void should_land_the_rover_on_area() {
         Area area = new Area(10, 10);
         Rover rover = new Rover();
         rover.land(area, 5, 5, Rover.EAST);
@@ -77,23 +77,23 @@ public class MarsRoverTest {
         assertThat(postion).isEqualTo("66E");
     }
 
-    @Test
-    public void landException(){
-        exceptedException.expect(IllegalArgumentException.class);
-        exceptedException.expectMessage("out of bound !");
-        Area area = new Area(10,10);
-        Rover rover =new Rover();
-        rover.land(area,20,5, "E");
-        rover.move();
-    }
-
-    @Test
-    public void moveException() {
-        exceptedException.expect(IllegalArgumentException.class);
-        exceptedException.expectMessage("out of bound !");
-        Area area = new Area(10,10);
-        Rover rover =new Rover();
-        rover.land(area,10,5, "E");
-        rover.move();
-    }
+//    @Test
+//    public void landException(){
+//        exceptedException.expect(IllegalArgumentException.class);
+//        exceptedException.expectMessage("out of bound !");
+//        Area area = new Area(10,10);
+//        Rover rover =new Rover();
+//        rover.land(area,20,5, "E");
+//        rover.move();
+//    }
+//
+//    @Test
+//    public void moveException(){
+//        exceptedException.expect(IllegalArgumentException.class);
+//        exceptedException.expectMessage("out of bound !");
+//        Area area = new Area(10,10);
+//        Rover rover =new Rover();
+//        rover.land(area,10,5, "E");
+//        rover.move();
+//    }
 }

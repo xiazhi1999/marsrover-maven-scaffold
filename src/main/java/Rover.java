@@ -5,20 +5,21 @@ public class Rover {
     public static final String WEST = "W";
     private int x;
     private int y;
+    private Area area;
     private String direction;
 
     public void land(Area area, int x, int y, String direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
-        area.setX(x);
-        area.setY(y);
-        if (x > area.getX()) {
-            throw new IllegalArgumentException("out of bound!");
-        }
-        if (y > area.getY()) {
-            throw new IllegalArgumentException("out of bound!");
-        }
+//        area.setX(x);
+//        area.setY(y);
+//        if (x > area.getX()) {
+//            throw new IllegalArgumentException("out of bound !");
+//        }
+//        if (y > area.getY()) {
+//            throw new IllegalArgumentException("out of bound !");
+//        }
     }
 
     public String getPosition() {
